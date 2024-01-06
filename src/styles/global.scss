@@ -1,0 +1,74 @@
+@use './normalize';
+
+:root {
+
+  //Colors
+  --red: hsl(344, 94%, 36%);
+  --blue: hsl(218, 76%, 27%);
+  --gray: hsl(0, 2%, 89%);
+
+  //Fonts
+  --font: 'Montserrat Variable',
+    sans-serif;
+
+  //Radious
+  --round-sm: 4px;
+  --round-mm: 8px;
+  --round-l: 12px;
+  --round-xl: 16px;
+  --round-xxl: 20px;
+
+  //Containers
+  --container: 1024px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--blue);
+  text-transform: uppercase;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.Container {
+  width: 100%;
+  max-width: var(--container);
+  margin: auto;
+  padding: 0 2em;
+  display: inherit;
+  flex-flow: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  align-content: inherit;
+  font-size: inherit;
+}
+
+body {
+  background-color: var(--yellow);
+  height: 100vh;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}

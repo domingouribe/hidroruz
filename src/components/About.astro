@@ -1,0 +1,18 @@
+---
+import data from "../data/sitedata";
+---
+
+<section class="About">
+	<div class="Container">
+		<h1 class="About-title">{data.about.title}</h1>
+		<p class="About-description">{data.about.text}</p>
+	</div>
+</section>
+
+<style lang="scss">
+	.About {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+	}
+</style>

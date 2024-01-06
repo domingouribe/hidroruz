@@ -1,0 +1,48 @@
+---
+interface Props {
+	title?: string;
+	tag?: string;
+	whatsAppNumber: string;
+	email: string;
+}
+
+const { title, whatsAppNumber, email } = Astro.props;
+import { Image } from "astro:assets";
+import WhatsAppIcon from "../assets/icons/whatsapp.svg";
+import EmailIcon from "../assets/icons/mail.svg";
+---
+
+<h2 class="QuoteTitle">{title}</h2>
+<ul class="Info">
+	<li>
+		<Image src={WhatsAppIcon} alt="algo" />
+		{whatsAppNumber}
+	</li>
+	<li><Image src={EmailIcon} alt="algo más" class="Info-image" /> {email}</li>
+</ul>
+
+<style lang="scss">
+	.QuoteTitle {
+		text-align: center;
+		margin: 1em 0;
+	}
+	.Info {
+		list-style: none;
+		padding: 0;
+		margin: 1em auto;
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 0.5em;
+		align-items: inherit;
+		width: 70vw;
+
+		& li {
+			display: flex;
+			gap: 0.3em;
+		}
+
+		&-image {
+			fill: var(--blue);
+		}
+	}
+</style>

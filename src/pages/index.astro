@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import OurBrands from "../components/OurBrands.astro";
+import Quote from "../components/Quote.astro";
+import Xperts from "../components/Xperts.astro";
+---
+
+<Layout title="Bienvenidos a Hidroruz">
+	<Hero />
+	<About />
+	<OurBrands />
+	<div class="CenterContent">
+		<Quote
+			title="Cotiza ahora"
+			tag="Contáctanos directamente aquí"
+			email="contacto@hidroruz.cl"
+			whatsAppNumber="+569 3953 8802"
+		/>
+	</div>
+	<Xperts />
+	<section class="CenterContent">
+		<Quote
+			title="Contáctanos"
+			tag="Contáctanos directamente aquí"
+			email="contacto@hidroruz.cl"
+			whatsAppNumber="+569 3953 8802"
+		/>
+	</section>
+</Layout>
+
+<style lang="scss">
+	.CenterContent {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+	}
+</style>

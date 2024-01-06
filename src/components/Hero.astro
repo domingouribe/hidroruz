@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../assets/images/logo.svg";
+import data from "../data/sitedata";
+---
+
+<section class="Hero">
+	<Image src={Logo} alt="Marca Hidroruz" class="Hero-brand" width={400} />
+	<p class="Hero-text">{data.hero.text}</p>
+	<a href={data.hero.ctaUrl} class="Hero-button"> {data.hero.cta}</a>
+</section>
+
+<style lang="scss">
+	.Hero {
+		display: flex;
+		flex-flow: column nowrap;
+		height: 40vh;
+		align-items: center;
+		justify-content: center;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.048), rgba(0, 0, 0, 1.5)),
+			url(../assets/images/plomero.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		color: white;
+		padding: 2em 4em;
+		gap: 1.5em;
+
+		&-text {
+			margin: 0;
+		}
+
+		&-button {
+			background-color: var(--blue);
+			color: var(--blanco);
+			padding: 1rem 2rem;
+			border-radius: 50px;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: 900;
+			text-align: center;
+			transition: all 0.2s ease;
+
+			&:hover {
+				background-color: var(--red);
+			}
+		}
+	}
+</style>

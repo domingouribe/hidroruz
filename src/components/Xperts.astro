@@ -1,0 +1,26 @@
+---
+import data from "../data/sitedata";
+---
+
+<section class="XpertsSection">
+	<div class="Container">
+		<div class="Xperts">
+			<h2 class="Xperts-title">{data.expertos.title}</h2>
+			{
+				data.expertos.text.split("\n").map(
+					(paragraph, index) =>
+						paragraph.trim() !== "" && ( //@ts-ignore
+							<p key={index}>{paragraph}</p>
+						)
+				)
+			}
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+	.Xperts {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+</style>

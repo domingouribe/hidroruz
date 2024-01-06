@@ -1,0 +1,42 @@
+---
+import data from "../data/sitedata";
+import TheBrand from "./TheBrand.astro";
+---
+
+<section class="Brands">
+	<div class="Container">
+		<h1 class="Brands-title">{data.brands.title}</h1>
+		<p class="Brands-description">{data.brands.text}</p>
+		<div class="TheBrands">
+			<TheBrand
+				name="THC"
+				imagePath="/src/assets/brands/thc.png"
+				altText="My dear brand"
+			/>
+			<TheBrand
+				name="Taumm"
+				imagePath="/src/assets/brands/taumm.png"
+				altText="My dear brand"
+			/>
+			<TheBrand
+				name="Vinilit"
+				imagePath="/src/assets/brands/vinilit.png"
+				altText="My dear brand"
+			/>
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+	.Brands {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+	}
+
+	.TheBrands {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 1em;
+	}
+</style>

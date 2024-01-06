@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+
+const { imagePath, altText, name } = Astro.props;
+---
+
+<article class="TheBrand">
+	<h3 class="TheBrand-title">{name}</h3>
+	<Image src={imagePath} alt={altText} class="TheBrand-image" />
+</article>
+
+<style lang="scss">
+	.TheBrand {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		width: 100%;
+		max-width: 100px;
+
+		&-title {
+			text-transform: none;
+			margin: 1em 0 1em;
+		}
+
+		&-image {
+			width: 100%;
+			height: auto;
+		}
+	}
+</style>

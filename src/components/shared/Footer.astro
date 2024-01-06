@@ -1,0 +1,26 @@
+---
+import Quote from "../Quote.astro";
+---
+
+<footer class="Footer">
+	<h4 class="Footer-thanks">Gracias por visitar Hidroruz</h4>
+	<Quote
+		email="contacto@hidroruz.cl"
+		whatsAppNumber="+569 3953 8802"
+	/>
+</footer>
+
+<style lang="scss">
+	.Footer {
+		background-color: var(--blue);
+		color: white;
+		padding: 2em 0;
+		align-items: center;
+
+		&-thanks {
+			color: white;
+			text-align: center;
+			margin: 0;
+		}
+	}
+</style>
