@@ -6,7 +6,7 @@ const { imagePath, altText, name } = Astro.props;
 
 <article class="TheBrand">
 	<h3 class="TheBrand-title">{name}</h3>
-	<Image src={imagePath} alt={altText} class="TheBrand-image" />
+	<Image src={imagePath} alt={altText} class="TheBrand-image" width={400} />
 </article>
 
 <style lang="scss">

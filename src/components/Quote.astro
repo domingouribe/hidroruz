@@ -15,10 +15,13 @@ import EmailIcon from "../assets/icons/mail.svg";
 <h2 class="QuoteTitle">{title}</h2>
 <ul class="Info">
 	<li>
-		<Image src={WhatsAppIcon} alt="algo" />
+		<Image src={WhatsAppIcon} alt="WhatsApp" width={20} />
 		{whatsAppNumber}
 	</li>
-	<li><Image src={EmailIcon} alt="algo más" class="Info-image" /> {email}</li>
+	<li>
+		<Image src={EmailIcon} alt="algo más" class="Info-image" width={20} />
+		{email}
+	</li>
 </ul>
 
 <style lang="scss">
